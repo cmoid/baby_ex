@@ -113,7 +113,7 @@ defmodule Baby.Connection do
     # We have a non-empty shoots list
     # Yeah, this is unsatisfyingly written
     Process.send_after(conn_info.pid, :outbox, @outrate)
-    {:keep_state, Baby.Protocol.outbound(conn_info, :BAMB), []}
+    {:keep_state, Protocol.outbound(conn_info, :BAMB), []}
   end
 
   # This has matches so that we catch if we messed up the
