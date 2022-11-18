@@ -34,7 +34,7 @@ This document may describe behavior exhibited by the reference implementation.  
 ### Nonce boxes
 
 The majority of communications (everything except "HELLO") are sent in so-called "nonce boxes".
-These are simply a concatenation of a 24-byte nonce and NaCl secret box which uses that nonce. These are wrapped via STLV with the message type (`2` or `3`) as appropriate.
+These are simply a concatenation of a 24-byte nonce and NaCl secret box which uses that nonce. These are wrapped via STLV with the message type (`2`, `5`, `6`, or `8`) as appropriate.
 
 The process is fairly straightforward, once "send" and "receive" keys are established in the "AUTH" state.
 
