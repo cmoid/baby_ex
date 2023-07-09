@@ -24,13 +24,19 @@ defmodule Baby.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:baobab, "~> 0.19.0"},
       {:primacy,">= 0.0.0"},
+
+      # {:baobab, "~> 0.16.0"},
+      {:baobab, git: "https://github.com/cmoid/baobab_ex"},
+      # use for local hacking
+      # {:baobab, path: "/Users/cmoid/code/baobab_ex"},
       {:stlv, "~> 1.0"},
       {:varu64, "~> 1.0"},
       # Third-party
       {:cbor, "~> 1.0"},
-      {:enacl, "~> 1.2"},
+      # enacl not needed at all, included by baobab
+      # {:enacl, git: "https://git.sr.ht/~cmoid/enacl"},
+      # {:enacl, "~> 1.2"},
       {:ranch, "~> 1.8"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
