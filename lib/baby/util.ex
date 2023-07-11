@@ -5,8 +5,8 @@ defmodule Baby.Util do
   Utility functions for use across the codebase
   """
 
-  defp arrow(:in), do: "⇒"
-  defp arrow(:out), do: "⇐"
+  defp arrow(:in), do: "⇐"
+  defp arrow(:out), do: "⇒"
   defp arrow(:both), do: "⇔"
 
   @doc """
