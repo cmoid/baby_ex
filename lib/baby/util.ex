@@ -36,8 +36,11 @@ defmodule Baby.Util do
 
   defp tilde_peer(conn_info) do
     case Map.fetch(conn_info, :short_peer) do
-      {:ok, them} -> them
-      :error -> "~unknown"
+      {:ok, them} ->
+        them
+
+      :error ->
+        "~" <> (conn_info.our_pk |> Baobab.Identity.as_base62() |> String.slice(0..6))
     end
   end
 
