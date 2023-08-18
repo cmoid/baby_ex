@@ -8,6 +8,7 @@ defmodule Baby.Util do
   defp arrow(:in), do: "⇐"
   defp arrow(:out), do: "⇒"
   defp arrow(:both), do: "⇔"
+  defp arrow(:internal), do: "!"
 
   @doc """
   Standardised connection activity logging for the supplied state

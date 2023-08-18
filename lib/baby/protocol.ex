@@ -313,6 +313,8 @@ defmodule Baby.Protocol do
   defp pull_log_data(_, _), do: []
 
   defp import_their(stuff, conn_info) do
+    Util.connection_log(conn_info, :in, "incoming stuff and more", :debug)
+
     stuff
     |> Baobab.Interchange.import_binaries(clump_id: conn_info.clump_id)
     |> import_summary(conn_info)
